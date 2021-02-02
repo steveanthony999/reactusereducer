@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <>
       <Header title='useReducer' linkTo='/react-docs' linkName='React Docs' />
-      <Header title='' linkTo='/web-dev-simplified' linkName='Web Dev Simplified' />
+      <Header title='' linkTo='/web-dev-simplified' linkName='Web Dev Simplified - YouTube' />
     </>
   );
 };

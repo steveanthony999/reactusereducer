@@ -2,13 +2,18 @@ import { useReducer } from 'react';
 import Container from '../styles/Container';
 import Header from './utilityComponents/Header';
 
+const ACTIONS = {
+  INCREMENT: 'increment',
+  DECREMENT: 'decrement',
+};
+
 const initialState = { count: 0 };
 
 function reducer(state, action) {
   switch (action.type) {
-    case 'increment':
+    case ACTIONS.INCREMENT:
       return { count: state.count + 1 };
-    case 'decrement':
+    case ACTIONS.DECREMENT:
       return { count: state.count - 1 };
     default:
       throw new Error();
@@ -28,7 +33,7 @@ const ReactDocs = () => {
         <h2>Count: {state.count}</h2>
         <button
           onClick={() => {
-            dispatch({ type: 'decrement' });
+            dispatch({ type: ACTIONS.DECREMENT });
           }}
         >
           -
@@ -36,7 +41,7 @@ const ReactDocs = () => {
         <br />
         <button
           onClick={() => {
-            dispatch({ type: 'increment' });
+            dispatch({ type: ACTIONS.INCREMENT });
           }}
         >
           +
